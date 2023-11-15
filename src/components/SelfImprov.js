@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
+import self from "../../public/assets/self.png";
 
 function SelfImprov() {
   const items = [
@@ -35,7 +37,10 @@ function SelfImprov() {
             <p className="text-sm">
               Wrong with self-improvement & how we're fixing it.
             </p>
-            <h2 className="mt-2">Self-improvement. Ugh.</h2>
+            <div className="flex justify-start gap-4">
+              <h2 className="mt-2">Self-improvement. Ugh.</h2>
+              <Image src={self} width={50} alt="self" />
+            </div>
           </div>
           <div className="timeline-container"></div>
         </div>

@@ -7,14 +7,14 @@ import familiar from "../../public/assets/familiar.png";
 function Familiar() {
   const cardContent = [
     {
-      emoji: "🚀",
+      emoji: "😠",
       bgColor: "bg-[#D8F2FF]",
       heading: "You argue with a collague",
       text: "Do incididunt anim elit et in dolor. elit et in dolor.Ad et nisi consectetur tempor voluptate nulla.",
       tilt: false,
     },
     {
-      emoji: "🚀",
+      emoji: "😍",
       bgColor: "bg-[#EEEBFE]",
       heading: "You argue with a collague",
       text: "Do incididunt anim elit et in dolor.Ad et nisi consectetur tempor voluptate nulla.",
@@ -28,7 +28,7 @@ function Familiar() {
       tilt: true,
     },
     {
-      emoji: "🚀",
+      emoji: "😶‍🌫️",
       bgColor: "bg-[#FFEFD5]",
       heading: "You argue with a collague",
       text: "Do incididunt anim elit et in dolor.Ad et nisi consectetur tempor voluptate nulla.",
@@ -57,7 +57,7 @@ function Familiar() {
       <div className="">
         <h2 className="flex items-center w-[75%] m-auto mt-4 mb-14">
           Does this sound familiar...
-          <Image className="ml-2" src={familiar} width={70} />
+          <Image className="ml-2" src={familiar} width={70} alt="familiar" />
         </h2>
         <div className="">
           <Marquee
@@ -66,9 +66,10 @@ function Familiar() {
             pauseOnHover={true}
             className="flex justify-center items-center py-4"
           >
-            {cardContent.map((item) => {
+            {cardContent.map((item, index) => {
               return (
                 <IqCard
+                  key={index}
                   emoji={item.emoji}
                   bgColor={item.bgColor}
                   heading={item.heading}

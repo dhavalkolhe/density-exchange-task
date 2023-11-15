@@ -39,7 +39,7 @@ function WorkWithUs() {
           {/* LEFT SIDE */}
           <div className="w-2/5 bg-white rounded-2xl">
             <div className="px-6 mt-4 mb-4">
-              <Image src={work} width={35}/>
+              <Image src={work} width={35} alt="work" />
             </div>
             <p className="text-lg font-semibold px-6 mb-2">About</p>
             <p className="text-gray-700 px-6 leading-relaxed mb-12">
@@ -64,9 +64,9 @@ function WorkWithUs() {
 
           {/* RIGHT SIDE */}
           <div className="custom-scroll flex flex-col gap-4 h-full px-12 overflow-hidden overflow-y-scroll">
-            {workCardsContent.map((item) => {
+            {workCardsContent.map((item, index) => {
               return (
-                <div className="bg-white rounded-2xl p-6 w-80">
+                <div className="bg-white rounded-2xl p-6 w-80" key={index}>
                   <p className="font-bold mb-2">{item.heading}</p>
                   <p className="text-sm">{item.text}</p>
                 </div>

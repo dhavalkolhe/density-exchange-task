@@ -14,11 +14,11 @@ function Navbar() {
   return (
     <div className="flex justify-between items-center w-[75%] m-auto mt-6">
       <div>
-        <Image src={logo} width={70} draggable={false} />
+        <Image src={logo} width={70} draggable={false} alt="logo" />
       </div>
       <div className="flex justify-between items-center w-1/2">
-        {navbarOptions.map((item) => (
-          <p>{item}</p>
+        {navbarOptions.map((item, index) => (
+          <p key={index}>{item}</p>
         ))}
       </div>
       <div>

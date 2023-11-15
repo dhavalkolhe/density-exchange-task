@@ -27,9 +27,10 @@ function Career() {
     <div className="w-[75%] mx-auto mb-10 p-10">
       <h2 className="px-4">Open Vacancies</h2>
       <div className="flex justify-center items-center gap-6 h-[250px]">
-        {openings.map((item) => {
+        {openings.map((item, index) => {
           return (
             <Vacancy
+              key={index}
               heading={item.heading}
               bullet1={item.bullet1}
               bullet2={item.bullet2}
