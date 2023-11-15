@@ -6,6 +6,8 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 0, 0, 0;
+  --background-pink-rgb: 238, 235, 254;
+  --background-orange-rgb: 254, 247, 241;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +26,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h3 {
+  @apply text-3xl;
 }
