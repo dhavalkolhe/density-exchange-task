@@ -1,29 +1,67 @@
+"use client";
+
 import React from "react";
 
 function SelfImprov() {
+  const items = [
+    {
+      cardTitle: "it's not as easy as 1-2-3",
+      cardSubtitle:
+        "The journey of change may be long, but our sessions are quick. We get to the point and tell you what you want to know (and nothing else)",
+    },
+    {
+      cardTitle: "it's not as easy as 1-2-3",
+      cardSubtitle:
+        "The journey of change may be long, but our sessions are quick. We get to the point and tell you what you want to know (and nothing else)",
+    },
+    {
+      cardTitle: "it's not as easy as 1-2-3",
+      cardSubtitle:
+        "The journey of change may be long, but our sessions are quick. We get to the point and tell you what you want to know (and nothing else)",
+    },
+    {
+      cardTitle: "it's not as easy as 1-2-3",
+      cardSubtitle:
+        "The journey of change may be long, but our sessions are quick. We get to the point and tell you what you want to know (and nothing else)",
+    },
+  ];
+
   return (
-    <div className="h-screen">
-      <div>Carousel Temp</div>
-      <div className="w-[75%] m-auto mt-6 flex justify-between items-center">
-        <h3 className="w-1/3">Be the best you with EQ</h3>
-        <p className="w-1/3">
-          Aliquip do exercitation incididunt ipsum exercitation ipsum laborum
-          enim. Quis ullamco aliqua non quis. Velit ut nostrud cupidatat eiusmod
-          eiusmod adipisicing voluptate irure et cillum enim duis velit in.
-          Reprehenderit quis mollit sunt enim ipsum minim. Elit nulla aliqua
-          duis ipsum magna duis est incididunt dolore sint ipsum. Elit pariatur
-          Lorem dolore adipisicing ex commodo aliqua sint non deserunt irure.
+    <>
+      <div className="h-screen flex flex-col items-center border-2 border-green-700">
+        {/* Timeline */}
+        <div className="w-[75%] h-[80%] m-auto border-2 border-red-700">
+          <div className="px-12">
+            <p className="text-sm">
+              Wrong with self-improvement & how we're fixing it.
+            </p>
+            <h2 className="mt-2">Self-improvement. Ugh.</h2>
+          </div>
+          <div className="timeline-container"></div>
+        </div>
+      </div>
+
+      {/* Text */}
+      <div className="w-[75%] mx-auto flex justify-between items-start">
+        <h3 className="w-1/3">
+          Be the best you
+          <br /> with EQ
+        </h3>
+        <p className="w-1/3  text-gray-700">
+          Not having your own emotions <br />
+          under control might be holding
+          <br />
+          you back.
         </p>
-        <p className="w-1/3">
-          Aliquip do exercitation incididunt ipsum exercitation ipsum laborum
-          enim. Quis ullamco aliqua non quis. Velit ut nostrud cupidatat eiusmod
-          eiusmod adipisicing voluptate irure et cillum enim duis velit in.
-          Reprehenderit quis mollit sunt enim ipsum minim. Elit nulla aliqua
-          duis ipsum magna duis est incididunt dolore sint ipsum. Elit pariatur
-          Lorem dolore adipisicing ex commodo aliqua sint non deserunt irure.
+        <p className="w-1/3  text-gray-700">
+          Additionally, not understanding
+          <br />
+          those of others stops you from
+          <br />
+          being parent, friend you can be.
         </p>
       </div>
-    </div>
+    </>
   );
 }
 

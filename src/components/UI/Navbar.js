@@ -1,4 +1,7 @@
+import Image from "next/image";
 import React from "react";
+
+import logo from "../../../public/assets/logo.png";
 
 function Navbar() {
   const navbarOptions = [
@@ -11,7 +14,7 @@ function Navbar() {
   return (
     <div className="flex justify-between items-center w-[75%] m-auto mt-6">
       <div>
-        <img alt="placeholder" src="" />
+        <Image src={logo} width={70} draggable={false} />
       </div>
       <div className="flex justify-between items-center w-1/2">
         {navbarOptions.map((item) => (

@@ -4,20 +4,29 @@ function Meet() {
   return (
     <div className="h-screen flex justify-center items-center">
       <div
-        className="m-auto flex justify-between rounded-xl items-center w-[60%]"
+        className="m-auto flex justify-evenly rounded-xl items-center w-[75%] h-[70%]"
         style={{
           background: `rgb(var(--background-orange-rgb))`,
         }}
       >
-        <div className="w-1/2 border-2 border-green-700">
-          <p>Built out of frustration</p>
-          <h2>Meet the ahead app</h2>
+        <div className="flex flex-col justify-around items-start w-1/2 h-full">
+          <div>
+            <p className="text-sm font-semibold mb-2">
+              Built out of frustration
+            </p>
+            <h2>Meet the ahead app</h2>
+          </div>
+
+          <div className="">Avatar</div>
         </div>
-        <div className="w-1/2 border-2 border-blue-700">
+        <div className="w-[35%] relative top-8 leading-relaxed text-gray-700">
           <p>
-            A personalized pocket coach that provides bite- sired,
-            science-driven tools to boost emotional intelligence. Think of it as
-            a pocket cheerleader towards a better, more fulfilling.
+            A personalized pocket coach that provides bite-
+            <br />
+            sized, science-driven tools to boost emotional
+            <br /> intelligence. <br />
+            <br /> Think of it as a pocket cheerleader towards a<br /> better,
+            more fulfilling.
           </p>
         </div>
       </div>

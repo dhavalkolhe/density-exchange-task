@@ -6,6 +6,8 @@ import SelfImprov from "@/components/SelfImprov";
 import Rating from "@/components/Rating";
 import Start from "@/components/Start";
 import WorkWithUs from "@/components/WorkWithUs";
+import Career from "@/components/Career";
+import Footer from "@/components/UI/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Rating />
       <Start />
       <WorkWithUs />
+      <Career />
+      <Footer />
     </div>
   );
 }

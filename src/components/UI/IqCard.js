@@ -1,13 +1,15 @@
 import React from "react";
 import { AirplaneTilt } from "@phosphor-icons/react/dist/ssr";
 
-function IqCard({ width, heading, text }) {
-  const styleOptions = `flex ${width} border-2 border-red-700 rounded-xl`;
+function IqCard({ emoji, bgColor, heading, text, tilt }) {
+  const styleOptions = `flex flex-col mx-[24px] ${bgColor} gap-2 w-[325px] rounded-xl py-6 px-4 ${
+    tilt ? "-rotate-[4deg] scale-[1.05] text-white" : ""
+  }`;
   return (
     <div className={styleOptions}>
-      <AirplaneTilt size={200} color="#fdd131" weight="fill" />
-      <p>{heading}</p>
-      <p>{text}</p>
+      <p className="text-3xl">{emoji}</p>
+      <p className="font-semibold text-lg">{heading}</p>
+      <p className="w-[85%]">{text}</p>
     </div>
   );
 }
