@@ -1,15 +1,26 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Vacancy({ heading, bullet1, bullet2, bullet3 }) {
   const [hover, setHover] = useState(false);
 
   return (
-    <div
+    <motion.div
       className="flex flex-col gap-2 bg-[#FEFBEC] p-6"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 0.75,
+          delay: 0,
+        },
+      }}
+      viewport={{ once: true, amount: 0.5 }}
     >
       <p className="text-md font-semibold">{heading}</p>
       <ul className="text-sm list-disc pl-4">
@@ -22,7 +33,7 @@ function Vacancy({ heading, bullet1, bullet2, bullet3 }) {
           See Details
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Vacancy from "./UI/Vacancy";
+import { motion } from "framer-motion";
 
 function Career() {
   const openings = [
@@ -25,7 +28,22 @@ function Career() {
 
   return (
     <div className="w-[75%] mx-auto mb-10 p-12 snap-start">
-      <h2 className="px-4">Open Vacancies</h2>
+      <motion.h2
+        className="px-4"
+        initial={{ opacity: 0, x: "-50%", scale: 0 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          transition: {
+            duration: 0.75,
+            delay: 0,
+          },
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
+        Open Vacancies
+      </motion.h2>
       <div className="flex justify-center items-center gap-6 h-[250px]">
         {openings.map((item, index) => {
           return (

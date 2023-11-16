@@ -1,5 +1,10 @@
+"use client";
+
 import React from "react";
 import { AppleLogo, Star } from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import landing from "../../public/assets/landing.png";
 
 function Landing() {
   return (
@@ -11,22 +16,58 @@ function Landing() {
         }}
       >
         <div className="w-[40%]">
-          <p className="mb-4">Ahead app</p>
-          <h1 className="leading-tight mb-8">
+          <motion.p
+            className="mb-4"
+            initial={{ opacity: 0, translateX: "-50%", scale: 0 }}
+            animate={{ opacity: 1, translateX: "0", scale: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            Ahead app
+          </motion.p>
+          <motion.h1
+            className="leading-tight mb-8"
+            initial={{ opacity: 0, translateX: "-50%", scale: 0 }}
+            animate={{ opacity: 1, translateX: "0", scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
             Master your life <br /> by mastering
             <br /> emotions
-          </h1>
+          </motion.h1>
 
           <div className="flex gap-4">
-            <div className="flex justify-evenly items-center bg-black rounded-md p-0.5 text-white min-w-[120px]">
+            <motion.div
+              className="flex justify-evenly items-center bg-black rounded-md p-0.5 text-white min-w-[120px]"
+              initial={{ opacity: 0.5, scale: 0 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0,
+                },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <AppleLogo size={28} color="#ffffff" weight="fill" />
               <div>
                 <p className="text-[8px]">Download on the</p>
                 <p className="text-[14px] -mt-[2px]">App Store</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="scale-custom">
+            <motion.div
+              className="scale-custom"
+              initial={{ opacity: 0.5, scale: 0 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0,
+                },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <div className="flex gap-2">
                 <Star size={16} color="#fdd131" weight="fill" />
                 <Star size={16} color="#fdd131" weight="fill" />
@@ -35,12 +76,26 @@ function Landing() {
                 <Star size={16} color="#fdd131" weight="fill" />
               </div>
               <p className="text-sm mt-1">100+ AppStore reviews</p>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* RIGHT DIV */}
-        <div className="flex-[0.6]">Hello</div>
+        <motion.div
+          className="flex-[0.6] flex justify-center items-center"
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            transition: {
+              duration: 0.75,
+              delay: 0,
+            },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <Image src={landing} width={300} alt="landing" />
+        </motion.div>
       </div>
     </div>
   );

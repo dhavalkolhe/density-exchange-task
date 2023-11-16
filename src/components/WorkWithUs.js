@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import work from "../../public/assets/work.png";
+import { motion } from "framer-motion";
 
 function WorkWithUs() {
   const workCardsContent = [
@@ -29,10 +32,37 @@ function WorkWithUs() {
         style={{ background: `rgb(var(--background-pink-rgb))` }}
       >
         <div className="flex justify-between items-center mt-10 mb-4 pl-2 max-w-[90%] mx-auto">
-          <h2>Work with us</h2>
-          <p className="text-5xl font-semibold text-[#5E3CED] px-[75px]">
+          <motion.h2
+            initial={{ opacity: 0, x: "-50%", scale: 0 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              scale: 1,
+              transition: {
+                duration: 0.75,
+                delay: 0,
+              },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            Work with us
+          </motion.h2>
+          <motion.p
+            className="text-5xl font-semibold text-[#5E3CED] px-[75px]"
+            initial={{ opacity: 0, x: "50%", scale: 0 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              scale: 1,
+              transition: {
+                duration: 0.75,
+                delay: 0,
+              },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             ahead
-          </p>
+          </motion.p>
         </div>
 
         <div className="flex justify-around items-start h-[80%]">

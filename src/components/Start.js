@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { Reenie_Beanie } from "next/font/google";
+import { motion } from "framer-motion";
 
 const reenie_beanie = Reenie_Beanie({ subsets: ["latin"], weight: ["400"] });
 
@@ -15,13 +18,39 @@ function Start() {
         </p>
         <div className="mb-6">
           <span className="font-semibold">with love,</span>
-          <span className={`${reenie_beanie.className} text-3xl px-2`}>
+          <motion.span
+            className={`${reenie_beanie.className} text-3xl px-2 relative`}
+          >
             Team Ahead
-          </span>
+            <motion.span
+              className="bg-white w-full top-0 left-0 h-10 absolute"
+              initial={{ x: "0" }}
+              whileInView={{
+                x: "100%",
+                transition: {
+                  duration: 2,
+                  delay: 0.8,
+                },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            ></motion.span>
+          </motion.span>
         </div>
-        <button className="bg-black rounded-3xl py-3 px-5 text-white text-sm mb-2">
+        <motion.button
+          className="bg-black rounded-3xl py-3 px-5 text-white text-sm mb-2"
+          initial={{ opacity: 0.5, scale: 0 }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            transition: {
+              duration: 0.5,
+              delay: 0,
+            },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           Start a Test
-        </button>
+        </motion.button>
         <p className="text-xs text-gray-700">Take only 5 min</p>
       </div>
     </div>
