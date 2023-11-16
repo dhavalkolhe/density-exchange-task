@@ -30,8 +30,7 @@ function SelfImprov() {
 
   return (
     <>
-      <div className="h-screen flex flex-col justify-end items-center pb-2 snap-center border-2 border-green-700">
-        {/* Timeline */}
+      {/* <div className="h-screen flex flex-col justify-end items-center pb-2 snap-center border-2 border-green-700">
         <div className="w-[75%] h-[80%] mx-auto border-2 mb-3 border-red-700">
           <div className="px-12">
             <p className="text-sm">
@@ -44,7 +43,7 @@ function SelfImprov() {
           </div>
           <div className="timeline-container"></div>
         </div>
-      </div>
+      </div> */}
 
       {/* Text */}
       <div className="w-[75%] mx-auto flex justify-between items-start snap-center">

@@ -3,7 +3,7 @@ import { AppleLogo, Star } from "@phosphor-icons/react/dist/ssr";
 
 function Landing() {
   return (
-    <div className="flex justify-center items-end h-screen snap-center pb-4 border-2 border-red-700">
+    <div className="flex justify-center items-end h-screen snap-center pb-4">
       <div
         className="w-[85%] mx-auto rounded-xl h-[80%] flex justify-around items-center mb-4  "
         style={{
