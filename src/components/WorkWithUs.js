@@ -23,9 +23,9 @@ function WorkWithUs() {
   ];
 
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen flex justify-center items-center snap-center">
       <div
-        className="w-[85%] h-[85%] m-auto rounded-xl px-10 py-2"
+        className="w-[85%] h-[80%] mx-auto mt-14 rounded-xl px-10 py-2"
         style={{ background: `rgb(var(--background-pink-rgb))` }}
       >
         <div className="flex justify-between items-center mt-10 mb-4 pl-2 max-w-[90%] mx-auto">

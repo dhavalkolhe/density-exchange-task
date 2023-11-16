@@ -11,7 +11,7 @@ import Footer from "@/components/UI/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-screen snap snap-mandatory snap-y overflow-scroll">
       <Navbar />
       <Landing />
       <Familiar />

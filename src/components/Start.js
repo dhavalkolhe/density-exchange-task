@@ -5,7 +5,7 @@ const reenie_beanie = Reenie_Beanie({ subsets: ["latin"], weight: ["400"] });
 
 function Start() {
   return (
-    <div className="h-screen m-auto flex justify-center items-center ">
+    <div className="h-screen m-auto flex justify-center items-center snap-center">
       <div className="flex flex-col justify-center items-center text-center">
         <p className="mb-2">We take privacy seriously</p>
         <h3 className="mb-2">Before you get started</h3>

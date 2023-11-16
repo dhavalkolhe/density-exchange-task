@@ -24,7 +24,7 @@ function Career() {
   ];
 
   return (
-    <div className="w-[75%] mx-auto mb-10 p-10">
+    <div className="w-[75%] mx-auto mb-10 p-12 snap-start">
       <h2 className="px-4">Open Vacancies</h2>
       <div className="flex justify-center items-center gap-6 h-[250px]">
         {openings.map((item, index) => {

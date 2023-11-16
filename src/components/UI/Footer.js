@@ -10,7 +10,7 @@ import {
 
 function Footer() {
   return (
-    <div className="h-60 p-4">
+    <div className="h-70 p-4">
       <div className="w-[40%] m-auto flex flex-col justify-center items-center gap-5">
         <div className="flex flex-col items-center gap-1">
           <Image src={logo} width={45} alt="logo" />

@@ -36,8 +36,8 @@ function Familiar() {
     },
   ];
   return (
-    <div className="h-screen flex flex-col justify-around">
-      <div className="w-[75%] mx-auto mt-6 flex justify-between items-start">
+    <div className="h-screen flex flex-col justify-around snap-center">
+      <div className="w-[75%] mx-auto mt-14 pt-6 flex justify-between items-start">
         <h3 className="w-1/3">EQ beats IQ</h3>
         <p className="w-1/3  text-gray-700">
           People with high emotional

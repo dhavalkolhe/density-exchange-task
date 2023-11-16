@@ -2,9 +2,9 @@ import React from "react";
 
 function Meet() {
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen flex justify-center items-center pt-16 snap-center">
       <div
-        className="m-auto flex justify-evenly rounded-xl items-center w-[75%] h-[70%]"
+        className="m-auto flex justify-evenly rounded-xl items-center w-[75%] h-[80%]"
         style={{
           background: `rgb(var(--background-orange-rgb))`,
         }}
